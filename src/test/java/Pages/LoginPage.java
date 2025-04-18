@@ -13,12 +13,33 @@ public class LoginPage {
     WebDriver driver;
     @FindBy(id = "login2")
     WebElement initialLogin_id;
+    @FindBy(id = "loginusername")
+    WebElement enterUsername_id;
+    @FindBy(id = "loginpassword")
+    WebElement enterPassword_id;
+    @FindBy(className = "btn-primary")
+    WebElement loginBtn_id;
 
-    public LoginPage(WebDriver driver){
-        this.driver=driver;
-}
-    public void clickIntLogin(){
+    public LoginPage(WebDriver driver) {
+        this.driver = driver;
+    }
+
+    public void clickIntLogin() {
         new WebDriverWait(driver, Duration.ofSeconds(20)).until(ExpectedConditions.visibilityOf(initialLogin_id));
         initialLogin_id.click();
     }
+
+    public void setEnterUsername_id(String username) {
+        new WebDriverWait(driver, Duration.ofSeconds(20)).until(ExpectedConditions.visibilityOf(enterUsername_id));
+        enterUsername_id.sendKeys(username);
+    }
+
+    public void setEnterPassword_id(String password) {
+        enterPassword_id.sendKeys(password);
+    }
+    public void clickLoginBtn_id() {
+        loginBtn_id.click();
+    }
+
+
 }
