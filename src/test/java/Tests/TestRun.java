@@ -12,7 +12,7 @@ public class TestRun extends Base{
     public void enterUsernameTests(){
         loginPage.setEnterUsername_id(ReadFromExcel.username);
     }
-    @Test
+    @Test(dependsOnMethods = {"enterUsernameTests"})
     public void enterPasswordTests(){
         loginPage.setEnterPassword_id(ReadFromExcel.password);
     }

@@ -17,7 +17,7 @@ public class LoginPage {
     WebElement enterUsername_id;
     @FindBy(id = "loginpassword")
     WebElement enterPassword_id;
-    @FindBy(className = "btn-primary")
+    @FindBy(xpath ="/html/body/div[3]/div/div/div[3]/button[2]" )
     WebElement loginBtn_id;
 
     public LoginPage(WebDriver driver) {
