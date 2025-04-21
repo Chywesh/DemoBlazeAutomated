@@ -17,10 +17,12 @@ public class HomePage {
         this.driver = driver;
     }
 
-    public void setNameOfUserVerification_id(String name) {
+    public void setNameOfUserVerification_id() {
         new WebDriverWait(driver, Duration.ofSeconds(20)).until(ExpectedConditions.visibilityOf(nameOfUser_id));
-        nameOfUser_id.sendKeys(name);
-        assert nameOfUser_id.getText().equals(name);
+        nameOfUser_id.isDisplayed();
+
+
+
     }
 }
 

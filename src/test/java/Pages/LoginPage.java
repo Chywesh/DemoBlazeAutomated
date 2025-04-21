@@ -17,8 +17,9 @@ public class LoginPage {
     WebElement enterUsername_id;
     @FindBy(id = "loginpassword")
     WebElement enterPassword_id;
-    @FindBy(xpath ="/html/body/div[3]/div/div/div[3]/button[2]" )
+    @FindBy(xpath = "/html/body/div[3]/div/div/div[3]/button[2]")
     WebElement loginBtn_id;
+
 
     public LoginPage(WebDriver driver) {
         this.driver = driver;
@@ -37,6 +38,7 @@ public class LoginPage {
     public void setEnterPassword_id(String password) {
         enterPassword_id.sendKeys(password);
     }
+
     public void clickLoginBtn_id() {
         loginBtn_id.click();
     }
